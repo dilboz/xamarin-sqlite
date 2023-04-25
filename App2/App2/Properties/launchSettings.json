@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "App2": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\dilboz_safarov\\Desktop"
+    }
+  }
+}

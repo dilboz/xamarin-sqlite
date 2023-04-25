@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Views.Person">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="3" Padding="20">
+
+                <StackLayout>
+                    <Label Text="Ном ва насаб:" />
+                    <Entry x:Name="FullName"/>
+
+                    <Label Text="Шиноснома:" />
+                    <Entry x:Name="PassNumber"/>
+
+                    <Label Text="Деха:" />
+                    <Entry x:Name="VillageText" Placeholder="Интихоб кунед" Focused="OnSelectVillage"></Entry>
+
+                    <Label Text="Ҷинс:" />
+                    <Entry x:Name="GenderText" Placeholder="Интихоб кунед" Focused="OnSelectGender"></Entry>
+
+                    <Label Text="Вазъ:" />
+                    <Entry x:Name="StatusText" Placeholder="Интихоб кунед" Focused="OnSelectStatus"></Entry>
+
+                    <Label Text="Вазъи иҷтимоӣ:" />
+                    <Entry x:Name="SocialStatusText" Placeholder="Интихоб кунед" Focused="OnSelectSocialStatus"></Entry>
+
+                    <Label Text="Маълумот:" />
+                    <Entry x:Name="EducationText" Placeholder="Интихоб кунед" Focused="OnSelectEducation"></Entry>
+
+                    <Label Text="Сину сол:" />
+                    <Entry x:Name="AgeText" Keyboard="Numeric"></Entry>
+
+                    <StackLayout Orientation="Horizontal">
+                        <!-- Add your other UI elements here -->
+                        <CheckBox IsChecked="False" x:Name="IsCheckedDisabled"
+                                  CheckedChanged="OnCheckCheckedChangedIsDisabled" />
+                        <Label Text="Маъюб мебошад " VerticalOptions="CenterAndExpand" x:Name="LabelDisabled" />
+                    </StackLayout>
+
+                    <Label Text="Дараҷа:" />
+                    <Entry x:Name="DisabledLevelsText" Placeholder="Интихоб кунед" IsEnabled="False" Focused="OnSelectDisabledLevel"></Entry>
+
+                    <StackLayout Orientation="Horizontal">
+                        <!-- Add your other UI elements here -->
+                        <CheckBox IsChecked="False" x:Name="DualCitizenship"
+                                  CheckedChanged="OnCheckCheckedChangedIsDisabled" />
+                        <Label Text="Душаҳрвандӣ дорад ё не?  " VerticalOptions="CenterAndExpand" x:Name="LabelDualCitizenship" />
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <!-- Add your other UI elements here -->
+                        <CheckBox IsChecked="False" x:Name="MigrationStatus"
+                                  CheckedChanged="OnCheckCheckedChangedMigrationStatus" />
+                        <Label Text="Ҳозир дар муҳоҷират ?" VerticalOptions="CenterAndExpand"
+                               x:Name="LabelMigrationStatus" />
+                    </StackLayout>
+
+                    <Label Text="Давлат:" />
+                    <Entry x:Name="CountryText" Placeholder="Интихоб кунед" IsEnabled="False" Focused="OnSelectCountry"></Entry>
+
+                </StackLayout>
+ 
+                <StackLayout>
+                    <!-- Add your other UI elements here -->
+
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Cancel"
+
+                            Clicked="GetPersons"
+                            HorizontalOptions="FillAndExpand" />
+
+                    <Button Text="Save"
+                            Clicked="CreatePerson"
+                            HorizontalOptions="FillAndExpand" />
+
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
